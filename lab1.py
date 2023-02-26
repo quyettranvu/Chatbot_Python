@@ -8,7 +8,7 @@ import telegram
 import requests
 
 # Set up the bot
-bot_token = '6000232164:AAHGCoI-iQhVXH8nEAAsvPh74igCeiFeXGc'
+bot_token = 'BOT_TOKEN_KEY'
 bot = telegram.Bot(token=bot_token)
 
 # Define a function to handle incoming messages
@@ -17,7 +17,7 @@ def handle_message(update, context):
     search_query = update.message.text
     
     # Make a request to your custom search API
-    search_results = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyB1ZiXYc7QLenBNz3YtFVwfp3_DW0HahEc&cx=8007119fe63c2435e',params={'q': search_query})
+    search_results = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=API_KEY',params={'q': search_query})
     
      # Parse the search results and get the top result
     search_results_json = search_results.json()
